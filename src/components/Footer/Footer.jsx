@@ -49,30 +49,12 @@ export default function Footer() {
             <AiFillLinkedin />
           </a>
         </div>
-
-        {/* <Link className={style.link} to={'/register'}>
-          <p>Regístrate</p>
-        </Link>
-        <Link className={style.link} to={'/login'}>
-          <p>Inicia sesión</p>
-        </Link>
-        <p>Ayuda</p> */}
       </div>
 
       <div className={style.footerB}>
         <h4>SOMOSF5@TODOSLOSDERECHOSRESERVADOS</h4>
         <h4>Politica de privacidad</h4>
         <h4>Politica de cookies</h4>
-        {/* </div> */}
-
-        {/* <div className={style.socialMediaLogos}>
-          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-            <AiFillTwitterCircle />
-          </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <AiFillInstagram />
-          </a>
-        </div> */}
       </div>
     </div>
   )
