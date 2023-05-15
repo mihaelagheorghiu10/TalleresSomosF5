@@ -52,9 +52,11 @@ export default function Footer() {
       </div>
 
       <div className={style.footerB}>
-        <h4>SOMOSF5@TODOSLOSDERECHOSRESERVADOS</h4>
-        <h4>Politica de privacidad</h4>
-        <h4>Politica de cookies</h4>
+        <h4 className={style.footerB.title1}>
+          SOMOSF5@TODOSLOSDERECHOSRESERVADOS
+        </h4>
+        <h4 className={style.footerB.title2}>Politica de privacidad</h4>
+        <h4 className={style.footerB.title3}>Politica de cookies</h4>
       </div>
     </div>
   )
