@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
+    // <Router>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -14,6 +15,7 @@ function App() {
       </BrowserRouter>
       {/* <Navbar /> */}
     </div>
+    // </Router>
   )
 }
 
