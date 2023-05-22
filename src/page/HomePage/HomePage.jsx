@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './homePage.module.css'
-import Navbar from '../../components/navbar/Navbar'
+import Navbar from '../../Components/navbar/Navbar'
 import beginnerLevel from '../../assets/images/beginnerLevel.png'
-import Footer from '../../components/Footer/Footer'
-import CategoryCards from '../../components/CategoryCards/CategoryCards'
+import Footer from '../../Components/Footer/Footer'
+import CategoryCards from '../../Components/CategoryCards/CategoryCards'
 
 function HomePage() {
   return (
@@ -24,8 +24,42 @@ function HomePage() {
             title="hola"
             description="somos f5"
           />
+          <CategoryCards
+            beginnerLevel={beginnerLevel}
+            src="img"
+            title="hola"
+            description="somos f5"
+          />
+          <CategoryCards
+            beginnerLevel={beginnerLevel}
+            src="img"
+            title="hola"
+            description="somos f5"
+          />
+          <CategoryCards
+            beginnerLevel={beginnerLevel}
+            src="img"
+            title="hola"
+            description="somos f5"
+          />
         </div>
-        <div className={style.text2HomePage}></div>
+        <div className={style.text2HomePage}>
+          <h2 className={style.title3}>
+            Conviértete en el talento digital de mañana.
+          </h2>
+          <p className={style.textA}>
+            Disfruta programando con nuestra pedagogía práctica e innovadora. No
+            necesitas titulación o conocimiento previo, sólo importa tu
+            motivación, tu lógica, tu autonomía y tu capacidad de trabajar en
+            equipo. Hoy más que nunca las empresas necesitan nuevo talento
+            digital apuestan por su diversidad. El sector digital ofrece
+            salarios competitivos, contratos estables y buenas perspectivas de
+            desarrollo profesional.{' '}
+          </p>
+          <p className={style.textB}>
+            ¡Atrévete a romper los códigos con el modelo F5!
+          </p>
+        </div>
       </div>
       <Footer />
     </div>
