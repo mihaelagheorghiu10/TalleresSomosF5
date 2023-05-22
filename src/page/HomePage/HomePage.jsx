@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './homePage.module.css'
-import Navbar from '../../Components/Navbar/Navbar'
+import Navbar from '../../components/navbar/Navbar'
 import beginnerLevel from '../../assets/images/beginnerLevel.png'
-import Footer from '../../Components/Footer/Footer'
-import CategoryCards from '../../Components/CategoryCards/CategoryCards'
+import Footer from '../../components/Footer/Footer'
+import CategoryCards from '../../components/CategoryCards/CategoryCards'
 
 function HomePage() {
   return (
