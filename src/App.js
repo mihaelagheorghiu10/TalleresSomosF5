@@ -2,6 +2,7 @@ import './App.css'
 import HomePage from './page/HomePage/HomePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+
 function App() {
   return (
     <div className="App">
