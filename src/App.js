@@ -2,6 +2,8 @@ import './App.css'
 import HomePage from './page/HomePage/HomePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import DataTalleres from './utilities/DataTalleres.json'
+import Footer from './components/Footer/Footer'
+import Navbar from './components/navbar/Navbar'
 
 import EventDetail from './page/EventDetail/EventDetail'
 import Form from './page/Form/Form'
