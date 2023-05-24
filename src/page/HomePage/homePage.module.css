@@ -8,4 +8,34 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
+    background-color: #FFF1DD; 
+}
+
+.eventCardsHomePage{
+    display: flex;
+}
+
+.CategoryCards {
+    flex: 1;
+    margin: 100px;
+    padding: 200px;
+    background-color: #FFF1DD;
+    }
+
+.text2HomePage{
+    background-color: #00494A;
+    text-align: center;
+    color: white;
+    }
+
+.text1HomePage {
+    background-color: #FED2C0;
+}
+
+/* .textA{
+    
+} */
+
+.textB{ 
+    font-weight: bold;
 }
