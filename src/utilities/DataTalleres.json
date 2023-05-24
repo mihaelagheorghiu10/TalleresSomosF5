@@ -1,0 +1,136 @@
+{
+    "data": [
+        {
+            "tallerLevel": 0,
+            "id": 0,
+            "title": "Nivel 1",
+            "description": "1.Disfruta programando con HTML y CSS",
+            "talleres": [
+                {
+                    "title": "Taller inicial de introducció al lenguaje HTML",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Julio 2023",
+                    "duration":"20h"
+                
+                },
+                {
+                    "title": "Taller inicial de introducció al lenguaje CSS",
+                    "location": "Madrid",
+                    "mode": "Presencial",
+                    "date": "Junio 2023",
+                    "duration":"20h"
+                },
+                {
+                    "title": "Taller inicial de introducció al lenguaje HTML con CSS",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Setiembre 2023",
+                    "duration":"40h"
+                },
+                {
+                    "title": "Taller inicial de introducció al lenguaje HTML con CSS",
+                    "location": "Madrid",
+                    "mode": "Presencial",
+                    "date": "Setiembre 2023",
+                    "duration":"40h"
+                }
+            ]
+        },
+        {
+            "tallerLevel": 1,
+            "id": 1,
+            "title": "Nivel 2",
+            "description": "2.Aprende rompiendo los códigos preparando tu primer proyecto de front-end",
+            "talleres": [
+                {
+                    "title": "Taller inicial de introducción a React",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Junio 2023",
+                    "duration":"20h"
+                },
+                {
+                    "title": "Taller inicial de introducció a JavaScript",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Julio 2023",
+                    "duration":"20h"
+                },
+                {
+                    "title": "Taller: Proyecto Frontend con React y JavaScript",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Setiembre 2023",
+                    "duration":"40h"
+                },
+                {
+                    "title": "Taller: Proyecto Frontend con React y JavaScript",
+                    "location": "Madrid",
+                    "mode": "Presencial",
+                    "date": "Setiembre 2023",
+                    "duration":"40h"
+                }
+            ]
+        },
+        {
+            "tallerLevel": 2,
+            "id": 2,
+            "title": "Nivel 3",
+            "description": "3.Aprende rompiendo los códigos programando Back-end",
+            "talleres": [
+                {
+                    "title": "Taller inicial de introducció a Java",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Noviembre 2023",
+                    "duration":"20h"
+                },
+                {
+                    "title": "Taller inicial de introducció a Laravel con PHP",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Enero 2024",
+                    "duration":"20h"
+                },
+                {
+                    "title": "Taller: Proyecto de backend con Java ",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Diciembre 2023",
+                    "duration":"40h"
+                },
+                {
+                    "title": "Taller: Proyecto de backend con Laravel",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Febrero 2024",
+                    "duration":"40h"
+                }
+            ]
+        },
+        {
+            "tallerLevel": 3,
+            "id": 3,
+            "title": "Nivel 4",
+            "description": "4.Inmersión al Metaverso y AI",
+            "talleres": [
+                {
+                    "title": "Taller inicial de introducció a Metaverso",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Julio 2023",
+                    "duration":"40h"
+                },
+                {
+                    "title": "Taller inicial de introducció a la Inteligencia artificial",
+                    "location": "Barcelona",
+                    "mode": "online",
+                    "date": "Septiembre 2023",
+                    "duration":"40h"
+                }
+                
+            ]
+        }
+    ]
+}
