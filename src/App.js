@@ -7,20 +7,25 @@ import beginnerLevel from './assets/images/beginnerLevel.png'
 import Navbar from './components/Navbar/Navbar'
 import HomePage from './page/HomePage/HomePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import DataTalleres from './utilities/DataTalleres.json'
+
 
 function App() {
   return (
     // <Router>
     <div className="App">
-      {/* <h1>"empieza el viaje hacia tu talento digital"</h1> */}
-      <Footer />
-      <h1>"empieza el viaje hacia tu talento digital"</h1>
+      <Navbar />
+
       <CategoryCards
+
         beginnerLevel={beginnerLevel}
         src="img"
         title="hola"
         description="somos f5"
       />
+
+      {DataTalleres.data.map(taller => {return <button key={taller.id}>{taller.title} tiene estos talleres:</button>})}
+
 
       <BrowserRouter>
         <Routes>
@@ -28,7 +33,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
-      {/* <Navbar /> */}
+      <Footer />
+
+
     </div>
     // </Router>
   )
