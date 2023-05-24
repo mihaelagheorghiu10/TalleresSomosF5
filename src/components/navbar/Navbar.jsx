@@ -54,7 +54,7 @@ export default function Navbar() {
        
       </nav>
       <div  className={isMobile ? "open": "close"}>
-        <Link to="/itinirario">itinirario</Link>
+        <Link to="/itinirario">Itinirario</Link>
         <Link to="/empresas">Empresas</Link>
         <Link to="/partners">Partners</Link>
         <Link to="/sobre-f5">Sobre F5</Link>
