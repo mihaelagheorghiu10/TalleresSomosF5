@@ -1,31 +1,31 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/SomosF5.png';
 import style from './Navbar.module.css';
 import "./nav.css"
 
 export default function Navbar() {
-   const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-   const toggleMobileMenu = () => {
+  const toggleMobileMenu = () => {
     setIsMobile(!isMobile);
   };
-   
-    return (
+
+  return (
     <div className={style.NavbarContainer}>
       <div className={style.divLogo}>
-        
-       <Link to="/" className={style.logoLink}>
 
-         <img className={style.imgLogo} src={logo} alt="SomosF5" />
-       
-      </Link>
-    </div>
+        <Link to="/" className={style.logoLink}>
 
-  
+          <img className={style.imgLogo} src={logo} alt="SomosF5" />
 
-    <nav style={{position:"relative"}}>
-    <ul >
+        </Link>
+      </div>
+
+
+
+      <nav style={{ position: "relative" }}>
+        <ul >
           <li>
             <Link to="/itinerarios">Itinerarios</Link>
           </li>
@@ -50,16 +50,16 @@ export default function Navbar() {
           )}
         </button>
 
-        
-       
+
+
       </nav>
-      <div  className={isMobile ? "open": "close"}>
+      <div className={isMobile ? "open" : "close"}>
         <Link to="/itinirario">itinirario</Link>
         <Link to="/empresas">Empresas</Link>
         <Link to="/partners">Partners</Link>
         <Link to="/sobre-f5">Sobre F5</Link>
         <Link to="/contacto">Contacto</Link>
-        </div>
+      </div>
     </div>
   );
 
