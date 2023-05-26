@@ -9,16 +9,9 @@ import Form from './page/Form/Form'
 function App() {
   return (
     <div className="App">
-      <Navbar />
+     
 
-      {/* <CategoryCards
-
-
-        beginnerLevel={beginnerLevel}
-        src="img"
-        title="hola"
-        description="somos f5"
-      /> */}
+      
 
 
       <BrowserRouter>
