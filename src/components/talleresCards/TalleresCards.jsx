@@ -1,18 +1,43 @@
 import React from 'react';
-import './TalleresCard.css';
+import './TalleresCard.module.css';
 
-function CardTalleres({ imagenURL, titulo, fecha, forma, lugar }) {
+function TalleresCards({ DataTaller }) {
+     const cardTallerStyle = {
+        padding: '2rem',
+        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+        transition: '0.3s',
+        width: '200px',
+        margin: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        verticalAlign: 'top',
+        backgroundColor: '#FED2C0',
+        gap: '1rem', 
+
+
+    };
+
+    
+
     return (
-        <div className="CardTalleres-container">
-            <div className="CardTalleres">
-                <img src={imagenURL} alt="Imagen" className="CardTalleres-image" />
-                <h2 className="CardTalleres-title">{titulo}</h2>
-                <p className="CardTalleres-info">Fecha: {fecha}</p>
-                <p className="CardTalleres-info">Forma: {forma}</p>
-                <p className="CardTalleres-info">Lugar: {lugar}</p>
-            </div>
+        <div className="CardTaller" style={cardTallerStyle}>
+            <div> <img src={DataTaller.imagenURL} alt={DataTaller.title} /></div>
+
+            <h2
+            >{DataTaller.title}</h2>
+            <p
+            >{DataTaller.date}</p>
+            <p
+            >{DataTaller.formato}</p>
+            <p
+            >{DataTaller.ubicaion}</p>
+            <button >Inscribete</button>
+
         </div>
     );
 }
 
-export default CardTalleres;
+
+
+
+export default TalleresCards;

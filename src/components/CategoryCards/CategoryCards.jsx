@@ -54,7 +54,7 @@ function CategoryCards(props) {
         padding: '8px 16px',
         borderRadius: '4px',
         textDecoration: 'none',
-        alignSelf: 'flex-end',
+        
     };
 
     const buttonHoverStyle = {
@@ -71,6 +71,8 @@ function CategoryCards(props) {
         textAlign: 'left',
         borderRadius: '0 2rem 0 2rem',
         color: 'white',
+        height: '100%',
+        justifyContent: 'space-between',
     };
 
     return (

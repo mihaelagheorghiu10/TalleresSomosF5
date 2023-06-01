@@ -1,25 +1,28 @@
 import './App.css'
 import HomePage from './page/HomePage/HomePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import DataTalleres from './utilities/DataTalleres.json'
 
-import EventDetail from './page/EventDetail/EventDetail'
 import Form from './page/Form/Form'
+import  Talleres  from './page/talleres/Talleres'
+import EventDetail from './page/EventDetail/EventDetail'
+
 
 function App() {
   return (
     <div className="App">
-     
 
-      
+
+
 
 
       <BrowserRouter>
         <Routes>
           <Route path="/homePage" element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
-          <Route path="/eventDetail" element={<EventDetail />} />
+          <Route path="/EventDetail/:level" element={<EventDetail />} />
+          <Route path="/" element={<EventDetail />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/talleres/:level"element={<Talleres/>}/>
         </Routes>
       </BrowserRouter>
 
