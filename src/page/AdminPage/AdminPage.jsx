@@ -3,6 +3,7 @@ import style from './adminPage.module.css'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 // import ReactDOM from "react-dom";
+
 function AdminPage() {
   return (
     <div>
