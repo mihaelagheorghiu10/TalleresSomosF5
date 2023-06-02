@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './eventDetail.module.css'
-import Navbar from '../../Components/navbar/Navbar'
-import Footer from '../../Components/Footer/Footer'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 function EventDetail() {
   return (
