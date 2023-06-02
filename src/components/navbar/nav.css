@@ -6,11 +6,8 @@
     text-align: center;
     background: transparent;
    }
-   @media (min-width:650px) {
-   .mobile-menu-icon{
-     display: none;
-     }
-   }  
+   
+     
    .open{
     background-color:#fed2c0;
     width: 100%;
@@ -32,3 +29,8 @@
    display: none;
 
    }
+   @media (min-width:650px) {
+    .mobile-menu-icon,.open{
+      display: none;
+      }
+    }
