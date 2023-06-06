@@ -1,11 +1,14 @@
 import React from 'react'
 import style from './homePage.module.css'
 import Navbar from '../../components/navbar/Navbar'
+import Navbar from '../../components/navbar/Navbar'
 import beginnerLevel from '../../assets/images/beginnerLevel.png'
 import Footer from '../../components/Footer/Footer'
 import CategoryCards from '../../components/CategoryCards/CategoryCards'
 
 function HomePage() {
+  const Data = DataTalleres.data
+  console.log(Data)
   return (
     <div>
       <Navbar />
@@ -18,30 +21,16 @@ function HomePage() {
           <h1 className={style.title1}>#Rompemosloscodigos</h1>
         </div>
         <div className={style.eventCardsHomePage}>
-          <CategoryCards
-            beginnerLevel={beginnerLevel}
-            src="img"
-            title="hola"
-            description="somos f5"
-          />
-          <CategoryCards
-            beginnerLevel={beginnerLevel}
-            src="img"
-            title="hola"
-            description="somos f5"
-          />
-          <CategoryCards
-            beginnerLevel={beginnerLevel}
-            src="img"
-            title="hola"
-            description="somos f5"
-          />
-          <CategoryCards
-            beginnerLevel={beginnerLevel}
-            src="img"
-            title="hola"
-            description="somos f5"
-          />
+          {Data.map((item) => {
+            return (
+              <CategoryCards
+                beginnerLevel={beginnerLevel}
+                src="img"
+                title={item.title}
+                description={item.description}
+              ></CategoryCards>
+            )
+          })}
         </div>
         <div className={style.text2HomePage}>
           <h2 className={style.title3}>
