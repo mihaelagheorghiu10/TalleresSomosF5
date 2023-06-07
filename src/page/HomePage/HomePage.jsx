@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './homePage.module.css'
-import Navbar from '../../components/navbar/Navbar'
 import Navbar from '../../components/navbar/Navbar'
 import beginnerLevel from '../../assets/images/beginnerLevel.png'
 import Footer from '../../components/Footer/Footer'
 import CategoryCards from '../../components/CategoryCards/CategoryCards'
+import { getTalleres } from '../../services/talleres.services'
+import { useState } from 'react'
 
 function HomePage() {
-  const Data = DataTalleres.data
-  console.log(Data)
+  const [DataTalleres, setDataTalleres] = useState([])
+
+  const getAllTalleres = async () => {
+    const { data } = await getTalleres()
+    setDataTalleres(data[0].nivelesDeTaller)
+    console.log(data, 'json')
+  }
+  useEffect(() => {
+    getAllTalleres()
+  }, [])
+
   return (
     <div>
       <Navbar />
@@ -21,16 +31,16 @@ function HomePage() {
           <h1 className={style.title1}>#Rompemosloscodigos</h1>
         </div>
         <div className={style.eventCardsHomePage}>
-          {Data.map((item) => {
-            return (
-              <CategoryCards
-                beginnerLevel={beginnerLevel}
-                src="img"
-                title={item.title}
-                description={item.description}
-              ></CategoryCards>
-            )
-          })}
+          {DataTalleres &&
+            DataTalleres.map((item) => {
+              return (
+                <CategoryCards
+                  beginnerLevel={beginnerLevel}
+                  src="img"
+                  dataCategoryCards={item}
+                ></CategoryCards>
+              )
+            })}
         </div>
         <div className={style.text2HomePage}>
           <h2 className={style.title3}>
