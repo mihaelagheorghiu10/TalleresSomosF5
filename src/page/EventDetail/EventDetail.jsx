@@ -2,10 +2,13 @@
 import style from './eventDetail.module.css'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
+<<<<<<< HEAD
+=======
 import TalleresCards from "../../components/talleresCards/TalleresCards";
 import DataTalleres from "../../utilities/DataTalleres.json";
 import beginnerLevel from '../../assets/images/beginnerLevel.png'
 import { useParams } from 'react-router-dom'
+>>>>>>> b782b9cbce75e8c29e80e062497056e83caf7e21
 
 export default function EventDetail() {
   const { level } = useParams()

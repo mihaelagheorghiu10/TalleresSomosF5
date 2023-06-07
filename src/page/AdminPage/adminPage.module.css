@@ -1,0 +1,34 @@
+.formCreate{
+    border-radius: 1rem;
+    padding: 1.5rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color:#00494A ;
+    color: white;
+    min-width: 350px;
+    max-width: 500px;
+    margin: auto ;
+>input{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+}
+
+.editCreate{ 
+    border-radius: 1rem;
+    padding: 1.5rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color:#00494A ;
+    color: white;
+    min-width: 350px;
+    max-width: 500px;
+    margin: auto ;
+>input{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+}
