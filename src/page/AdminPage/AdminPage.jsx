@@ -1,12 +1,34 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 // import React from 'react'
 import style from './adminPage.module.css'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 // import ReactDOM from "react-dom";
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './adminPage.module.css'
+import { getTalleres } from '../../services/talleres.services'
+// import axios from 'axios'
+import { AuthContext } from '../../components/AuthContext'
 
-function AdminPage() {
+const AdminPage = () => {
+  const [DataTalleres, setDataTalleres] = useState([])
+
+  const getAllTalleres = async () => {
+    const { data } = await getTalleres()
+    setDataTalleres(data[0].nivelesDeTaller)
+    console.log(data, 'json')
+  }
+
+  // const AdminPage = () => {
+  const { user, isAdmin } = useContext(AuthContext)
+
+  if (!isAdmin()) {
+    return (
+      <div>No tienes permisos de administrador para acceder a esta página.</div>
+    )
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [data, setData] = useState([])
   const [titulo, setTitulo] = useState([])
   const [description, setDescription] = useState('')
@@ -51,6 +73,9 @@ function AdminPage() {
   return (
     <div>
       <Navbar />
+      <h1>Página de administración</h1>
+      <div>No tienes permisos de administrador para acceder a esta página.</div>
+      ;
       <div className={style.adminPageConteiner}>
         {/*  <form className={style.formCreate}>
        <h2>Crear Taller</h2>
@@ -109,8 +134,8 @@ function AdminPage() {
   )
 }
 
-{
-  /* export default AdminPage
+// {
+/* export default AdminPage
 
 /* class App extends React.Component {
     constructor(props) {
@@ -132,13 +157,13 @@ function AdminPage() {
       );
     }
   } */
-}
+// }
 
-{
-  /*  const rootElement = document.getElementById("root");
+// {
+/*  const rootElement = document.getElementById("root");
   ReactDOM.render(<App />, rootElement); */
-  /*  import React, { useState } from 'react';
+/*  import React, { useState } from 'react';
   import './App.css'; */
-}
+// }
 
 export default AdminPage
