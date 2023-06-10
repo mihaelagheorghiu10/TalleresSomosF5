@@ -1,5 +1,5 @@
 .homeContainer{
-    margin-top: 70px;
+    margin-top: 60px;
     margin-bottom: 80px;
     height: 100svh;
 
@@ -13,6 +13,9 @@
 
 .eventCardsHomePage{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 .CategoryCards {
@@ -26,6 +29,9 @@
     background-color: #00494A;
     text-align: center;
     color: white;
+    padding: 20px;
+    
+ 
     }
 
 .text1HomePage {
@@ -39,3 +45,19 @@
 .textB{ 
     font-weight: bold;
 }
+/*@media (max-width: 766px) {
+.homeContainer{
+   
+    display: none;
+}
+.eventCardsHomePage{
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+}@media (min-width: 500px) {
+
+    
+}*/

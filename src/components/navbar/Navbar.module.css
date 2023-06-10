@@ -11,7 +11,8 @@
     align-items: center;
     height: 60px;
     position: relative;
-
+    position: fixed;
+    top: 0; left: 0; right: 0;
   }
   
   .divLogo {
@@ -62,20 +63,19 @@
     border: none;
     background: transparent;
     font-size: 30px;
-    color: #000;
     cursor: pointer;
     margin-left: auto;
   }
   @media  screen and(max-width:1999px) {
-    .divLogo{
+    .divLogo,.NavbarContainer{
       margin-right: auto;
     } 
   }
   .NavbarContainer ul{
-    
+   
   }
 
-@media (max-width:650px) {
+@media (max-width:700px) {
   .NavbarContainer ul,.open,.close{
   display: none;
 
@@ -85,9 +85,10 @@
   .mobile-menu-icon {
    background-color: red;
   }
-  @media (min-width:650px) {
+  @media (min-width:400px) {
     .mobile-menu-icon{
     display: none;
+    
     }
   }  
   
