@@ -89,10 +89,14 @@ function AdminPage() {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [data, setData] = useState([])
-  const [titulo, setTitulo] = useState([])
+  const [titulo, setTitulo] = useState('')
   const [description, setDescription] = useState('')
   const [location, setLocation] = useState('')
+  const [date, setDate] = useState('')
 
+  const handleDateChange = (event) => {
+    setDate(event.target.value)
+  }
   const handleTituloChange = (event) => {
     setTitulo(event.target.value)
   }
@@ -113,10 +117,13 @@ function AdminPage() {
       title: titulo,
       description: description,
       location: location,
+      date: date,
+      mode: mode,
     }
 
     // Agregar el nuevo usuario al estado de datos
-    setTitulo([...titulo, newUser])
+    // setTitulo([...titulo, newUser])
+    setData([...data, newUser])
 
     // Limpiar los campos del formulario
     setTitulo('')
@@ -189,15 +196,26 @@ function AdminPage() {
               value={location}
               onChange={handleLocationChange}
             ></input>
-            {/* <label>Date</label>
-    <input type="date" placeholder="Date..."></input>
-    <label>Mode</label>
-    <input type="text" placeholder="mode..."></input>  */}
+            <label>Date</label>
+            <input
+              type="date"
+              placeholder="date..."
+              value={date}
+              onChange={handleDateChange}
+            ></input>
+            <label>Mode</label>
+            <input
+              type="text"
+              placeholder="mode..."
+              value={mode}
+              onChange={handleModeChange}
+            ></input>
             <button type="submit">Agregar</button>
             {data.map((user) => (
               <tr key={user.id}>
                 ,<td>{user.titulo}</td>,<td>{user.description}</td>,
-                <td>{user.location}</td>
+                <td>{user.location}</td>,<td>{user.date}</td>,
+                <td>{user.mode}</td>
               </tr>
             ))}
             <button onClick="handleDelete(user.id)">Eliminar</button>
@@ -207,31 +225,6 @@ function AdminPage() {
       <Footer />
     </div>
   )
-
-  // {
-  /* export default AdminPage
-
-/* class App extends React.Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        name: "",
-      };
-    }
-  
-    render() {
-      return (
-        <div className="App">
-          <h1>Hello!! {this.state.name}</h1>
-          <a href="javascript:;">
-            Open Modal
-          </a>
-        </div>
-      );
-    }
-  } */
-  // }
 
   // {
   /*  const rootElement = document.getElementById("root");
