@@ -29,6 +29,8 @@
     display: flex;
     text-align: left;
     gap: 10rem;
+    flex-wrap: wrap;
+    
 }
 
 .socialMediaLogos {
@@ -46,6 +48,19 @@ gap: 2rem;
     padding: 1rem ;
     background-color: #000;
     color: white;
+    
+
+    
+}
+@media (max-width: 766px) {
+    .footerLinksBox{
+        gap: 1rem
+    }
+    .footerB{
+        flex-direction: column;
+    }
+    
+
     
 }
 

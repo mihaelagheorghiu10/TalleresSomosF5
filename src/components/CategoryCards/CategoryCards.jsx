@@ -38,25 +38,29 @@ function CategoryCards({ dataCategoryCards, beginnerLevel }) {
     margin: '10px 0 10px',
   }
 
-  const pStyle = {
-    fontSize: '16px',
-    lineHeight: '1.5',
-    marginBottom: '20px',
-  }
+    const pStyle = {
+        fontSize: '16px',
+        lineHeight: '1.5',
+        marginBottom: '20px'
+       
+    };
 
-  const buttonStyle = {
-    display: 'inline-block',
-    fontSize: '14px',
-    color: '#fff',
-    backgroundColor: '#007bff',
-    padding: '8px 16px',
-    borderRadius: '4px',
-    textDecoration: 'none',
-  }
+    const buttonStyle = {
+        display: 'inline-block',
+        fontSize: '14px',
+        color: '#fff',
+        backgroundColor: '#007bff',
+        padding: '8px 16px',
+        borderRadius: '2px',
+        textDecoration: 'none',
+        borderRadius: '10px'
+        
+    };
 
-  const buttonHoverStyle = {
-    backgroundColor: '#0069d9',
-  }
+    const buttonHoverStyle = {
+        backgroundColor: '#0069d9'
+
+    };
 
   const squareStyle = {
     backgroundColor: '#004540',

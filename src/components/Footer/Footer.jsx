@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './footer.module.css'
-import logo from '../../assets/logoSomosF5.png'
+import logo from '../../assets/SomosF5.png'
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
@@ -13,7 +13,7 @@ export default function Footer() {
     <div className={style.footerSection}>
       <div className={style.footerPageConteiner}>
         <div className={style.divLogo}>
-          <img className={style.imgLogo} src={logo} alt="logoSomosF5.png"></img>
+          <img className={style.imgLogo} src={logo} alt="SomosF5.png"></img>
           <p>Fundacion Somos F5</p>
           <p>Avinguda Bogatell, 82 Bajos</p>
           <p>Barcelona, 08005</p>
