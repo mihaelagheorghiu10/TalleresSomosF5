@@ -44,6 +44,7 @@ function CategoryCards(props) {
         fontSize: '16px',
         lineHeight: '1.5',
         marginBottom: '20px'
+       
     };
 
     const buttonStyle = {
@@ -52,13 +53,15 @@ function CategoryCards(props) {
         color: '#fff',
         backgroundColor: '#007bff',
         padding: '8px 16px',
-        borderRadius: '4px',
+        borderRadius: '2px',
         textDecoration: 'none',
+        borderRadius: '10px'
         
     };
 
     const buttonHoverStyle = {
         backgroundColor: '#0069d9'
+
     };
 
     const squareStyle = {
