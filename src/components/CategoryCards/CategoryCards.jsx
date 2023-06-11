@@ -1,7 +1,7 @@
 import React from 'react'
 //import styles from "./categoryCards.module.css";
-import beginnerLevel from '../../assets/images/beginnerLevel.png'
-import Talleres from '../../page/talleres/Talleres'
+/* import beginnerLevel from '../../assets/images/beginnerLevel.png'
+import Talleres from '../../page/talleres/Talleres' */
 import { Link } from 'react-router-dom'
 
 //function CategoryCards (props) {

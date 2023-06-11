@@ -5,25 +5,25 @@ import Form from './page/Form/Form'
 import AdminPage from './page/AdminPage/AdminPage'
 import Talleres from './page/talleres/Talleres'
 import EventDetail from './page/EventDetail/EventDetail'
-import { AuthProvider } from './components/AuthContext'
+// import { AuthProvider } from './components/AuthContext'
 
 function App() {
   return (
-    <AuthProvider>
-      <div className="App">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/homePage" element={<HomePage />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="/EventDetail/:level" element={<EventDetail />} />
-            <Route path="/" element={<EventDetail />} />
-            <Route path="/form" element={<Form />} />
-            <Route path="/adminPage" element={<AdminPage />} />
-            <Route path="/talleres/:level" element={<Talleres />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </AuthProvider>
+    // <AuthProvider>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/homePage" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/EventDetail/:level" element={<EventDetail />} />
+          <Route path="/" element={<EventDetail />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/adminPage" element={<AdminPage />} />
+          <Route path="/talleres/:level" element={<Talleres />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+    // </AuthProvider>
   )
 }
 
