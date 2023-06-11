@@ -2,6 +2,7 @@ import './App.css'
 import HomePage from './page/HomePage/HomePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+
 import Form from './page/Form/Form'
 import AdminPage from './page/AdminPage/AdminPage'
 import Talleres from './page/talleres/Talleres'

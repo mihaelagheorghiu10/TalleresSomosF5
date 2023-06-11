@@ -12,7 +12,7 @@ function HomePage() {
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
-    setDataTalleres(data[0].nivelesDeTaller)
+    setDataTalleres(data)
     console.log(data, 'json')
   }
   useEffect(() => {
