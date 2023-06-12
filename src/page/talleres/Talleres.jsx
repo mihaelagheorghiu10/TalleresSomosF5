@@ -12,7 +12,8 @@ export default function Talleres() {
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
-    setDataTalleres(data[level].talleres)
+    
+    setDataTalleres(data[0].nivelesDeTaller[level].talleres)
     console.log(data, 'json')
   }
   useEffect(() => {
