@@ -7,10 +7,12 @@ import Form from './page/Form/Form'
 import AdminPage from './page/AdminPage/AdminPage'
 import Talleres from './page/talleres/Talleres'
 import EventDetail from './page/EventDetail/EventDetail'
+// import { AuthProvider } from './components/AuthContext'
 import RegistrationForm from './page/registrationForm/RegistrationForm'
 
 function App() {
   return (
+    // <AuthProvider>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -25,6 +27,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    // </AuthProvider>
   )
 }
 

@@ -17,19 +17,12 @@ export default function Talleres() {
   }
   useEffect(() => {
     getAllTalleres()
-  }, )
+  })
 
   return (
     <div>
       <Navbar />
       <div className={style.HomePageConteiner}>
-        {/* <div className={style.text1HomePage}>
-                <h1 className={style.title1}>Aqui</h1>
-                <h1 className={style.title2}>
-                    empieza el viaje hacia tu talento digital
-                </h1>
-                <h1 className={style.title1}>#Rompemosloscodigos</h1>
-            </div> */}
         <div className={style.eventCardsHomePage}>
           {DataTalleres &&
             DataTalleres.map((taller) => {
