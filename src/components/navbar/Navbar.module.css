@@ -83,7 +83,7 @@
 }
 
   .mobile-menu-icon {
-   background-color: red;
+   background-color: rgb(238, 228, 228);
   }
   @media (min-width:400px) {
     .mobile-menu-icon{

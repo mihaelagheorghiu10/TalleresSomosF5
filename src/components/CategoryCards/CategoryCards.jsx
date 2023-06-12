@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 //import styles from "./categoryCards.module.css";
 /* import beginnerLevel from '../../assets/images/beginnerLevel.png'
 import Talleres from '../../page/talleres/Talleres' */
 import { Link } from 'react-router-dom'
+import { getTalleres } from '../../services/talleres.services'
+
 
 //function CategoryCards (props) {
 //return (
