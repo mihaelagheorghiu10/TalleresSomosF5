@@ -17,7 +17,7 @@ export default function Talleres() {
   }
   useEffect(() => {
     getAllTalleres()
-  }, )
+  })
 
   return (
     <div>

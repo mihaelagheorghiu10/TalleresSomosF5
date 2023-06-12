@@ -16,6 +16,17 @@ import { Link } from 'react-router-dom'
 //}
 
 function CategoryCards({ dataCategoryCards, beginnerLevel }) {
+  const [DataTalleres, setDataTalleres] = useState([])
+
+  const getAllTalleres = async () => {
+    const { data } = await getTalleres()
+    setDataTalleres(data)
+    console.log(data, 'json')
+  }
+  useEffect(() => {
+    getAllTalleres()
+  }, [])
+
   const cardStyle = {
     padding: '1rem',
     boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
