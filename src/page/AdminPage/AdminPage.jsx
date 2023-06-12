@@ -1,20 +1,20 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-// import React from 'react'
 import style from './adminPage.module.css'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 // import ReactDOM from "react-dom";
 import React, { useEffect, useState } from 'react'
 import './adminPage.module.css'
-import { getTalleres } from '../../services/talleres.services'
+import { creatTaller, getTalleres } from '../../services/talleres.services'
 // import { AuthContext } from '../../components/AuthContext'
 
 function AdminPage() {
   const [DataTalleres, setDataTalleres] = useState([])
+  const [DataTemp, setDataTemp] = useState({})
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
-    setDataTalleres(data)
+    setDataTemp(data[0])
+    setDataTalleres(data[0].nivelesDeTaller)
     console.log(data, 'json')
   }
   useEffect(() => {
@@ -25,11 +25,18 @@ function AdminPage() {
   // const { user, isAdmin } = useContext(AuthContext)
 
   const [cards, setCards] = useState([]) // Estado para almacenar las tarjetas
-  const [newCard, setNewCard] = useState('') // Estado para el formulario de creación de tarjetas
+  const getAllCards = async () => {
+    const { data } = await getTalleres()
+    setDataTalleres(data)
+    console.log(data, 'json')
+  }
+  useEffect(() => {
+    getAllTalleres()
+  }, [])
 
+  const [newCard, setNewCard] = useState('')
   // Función para crear una nueva tarjeta
   const createCard = () => {
-    // Aquí puedes realizar la lógica para crear una nueva tarjeta, como enviarla al backend o almacenarla en el estado
     const card = { title: newCard }
     setCards([...cards, card])
     setNewCard('')
@@ -50,42 +57,43 @@ function AdminPage() {
     setCards(updatedCards)
   }
 
-  /* if (!isAdmin()) {
-      return (
-        <div>
-          No tienes permisos de administrador para acceder a esta página.
-        </div>
-      )
-    }
-
+  /*  const isAdmin = () => {
+    return false
+  }
+  if (!isAdmin()) {
     return (
-      <div>
-        <h1>Página de administración</h1>
-        {/* Formulario para crear una nueva tarjeta */
-  // }
-  /*  <input
-          type="text"
-          value={newCard}
-          onChange={(e) => setNewCard(e.target.value)}
-          placeholder="Título de la tarjeta"
-        />
-        <button onClick={createCard}>Crear tarjeta</button>
+      <div>No tienes permisos de administrador para acceder a esta página.</div>
+    )
+  }
 
-        {/* Lista de tarjetas existentes */
-  /* {cards.map((card, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              value={card.title}
-              onChange={(e) =>
-                updateCard(index, { ...card, title: e.target.value })
-              }
-            />
-            <button onClick={() => deleteCard(index)}>Eliminar tarjeta</button>
-          </div>
-        ))}
-      </div>
-    ) */
+  return (
+    <div>
+      <h1>Página de administración</h1>
+      {/* Formulario para crear una nueva tarjeta */
+
+  /*  <input
+        type="text"
+        value={newCard}
+        onChange={(e) => setNewCard(e.target.value)}
+        placeholder="Título de la tarjeta"
+      />
+      <button onClick={createCard}>Crear tarjeta</button>
+
+      {/* Lista de tarjetas existentes *}
+     /*  {cards.map((card, index) => (
+        <div key={index}>
+          <input
+            type="text"
+            value={card.title}
+            onChange={(e) =>
+              updateCard(index, { ...card, title: e.target.value })
+            }
+          />
+          <button onClick={() => deleteCard(index)}>Eliminar tarjeta</button>
+        </div>
+      ))}
+    </div> */
+  // )
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [data, setData] = useState([])
@@ -93,9 +101,13 @@ function AdminPage() {
   const [description, setDescription] = useState('')
   const [location, setLocation] = useState('')
   const [date, setDate] = useState('')
+  const [mode, setMode] = useState('')
 
   const handleDateChange = (event) => {
     setDate(event.target.value)
+  }
+  const handleModeChange = (event) => {
+    setMode(event.target.value)
   }
   const handleTituloChange = (event) => {
     setTitulo(event.target.value)
@@ -108,11 +120,12 @@ function AdminPage() {
     setLocation(event.target.value)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
+    let DataTalleresClon = DataTemp
+    console.log(DataTalleresClon)
 
-    // Crear un nuevo objeto de usuario con los datos ingresados
-    const newUser = {
+    const newTaller = {
       id: Date.now(),
       title: titulo,
       description: description,
@@ -120,20 +133,31 @@ function AdminPage() {
       date: date,
       mode: mode,
     }
+    console.log(newTaller)
+    const { data } = await creatTaller({})
+    console.log(data, 'response')
+    console.log(DataTalleresClon, 'clon')
 
     // Agregar el nuevo usuario al estado de datos
     // setTitulo([...titulo, newUser])
-    setData([...data, newUser])
 
     // Limpiar los campos del formulario
     setTitulo('')
     setDescription('')
+    setLocation('')
+    setDate('')
+    setMode('')
   }
 
-  const handleDelete = (id) => {
+  const handleDeleteData = (id) => {
     // Filtrar los usuarios para excluir el usuario con el ID proporcionado
     const updatedData = data.filter((user) => user.id !== id)
     setData(updatedData)
+  }
+  const handleDelete = (id) => {
+    // Filtrar los talleres para excluir el taller con el ID proporcionado
+    const updatedDataTalleres = DataTalleres.filter((item) => item.id !== id)
+    setDataTalleres(updatedDataTalleres)
   }
 
   return (
@@ -171,7 +195,7 @@ function AdminPage() {
        <input type="date" placeholder="Date..."></input>
        <label>Mode</label>
        <input type="text" placeholder="mode..."></input>
-     </form> */}
+      </form> */}
         <form onSubmit={handleSubmit}>
           <edit className={style.editCreate}>
             <h2>Editar Taller</h2>
@@ -225,13 +249,6 @@ function AdminPage() {
       <Footer />
     </div>
   )
-
-  // {
-  /*  const rootElement = document.getElementById("root");
-  ReactDOM.render(<App />, rootElement); */
-  /*  import React, { useState } from 'react';
-  import './App.css'; */
-  // }
 }
 
 export default AdminPage
