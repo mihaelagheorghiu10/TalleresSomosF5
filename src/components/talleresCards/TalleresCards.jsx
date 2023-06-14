@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TalleresCard.module.css';
 
 function TalleresCards({ DataTaller }) {
@@ -31,7 +32,9 @@ function TalleresCards({ DataTaller }) {
             >{DataTaller.formato}</p>
             <p
             >{DataTaller.ubicaion}</p>
-            <button >Inscribete</button>
+            <Link to ="/registrationForm"><button >Inscribete</button>
+            </Link>
+            
 
         </div>
     );

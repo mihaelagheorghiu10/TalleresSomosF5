@@ -6,9 +6,11 @@
     text-align: center;
     background: transparent;
    }
-   @media (min-width:650px) {
-   .mobile-menu-icon{
-     display: none;
+   @media (min-width:700px) {
+   .mobile-menu-icon,.open{
+     display: none !important;
+
+     
      }
    }  
    .open{
@@ -22,7 +24,8 @@
     flex-direction: column;
     align-items: center;
     font-weight: 700;
-    
+    color: #000;
+    text-decoration: none;
  
     
    

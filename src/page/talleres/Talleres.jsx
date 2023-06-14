@@ -12,24 +12,18 @@ export default function Talleres() {
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
+    
     setDataTalleres(data[0].nivelesDeTaller[level].talleres)
     console.log(data, 'json')
   }
   useEffect(() => {
     getAllTalleres()
-  }, )
+  })
 
   return (
     <div>
       <Navbar />
       <div className={style.HomePageConteiner}>
-        {/* <div className={style.text1HomePage}>
-                <h1 className={style.title1}>Aqui</h1>
-                <h1 className={style.title2}>
-                    empieza el viaje hacia tu talento digital
-                </h1>
-                <h1 className={style.title1}>#Rompemosloscodigos</h1>
-            </div> */}
         <div className={style.eventCardsHomePage}>
           {DataTalleres &&
             DataTalleres.map((taller) => {
