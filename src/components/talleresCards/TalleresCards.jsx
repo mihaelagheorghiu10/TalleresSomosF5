@@ -2,7 +2,7 @@ import React from 'react';
 import './TalleresCard.module.css';
 
 function TalleresCards({ DataTaller }) {
-     const cardTallerStyle = {
+    const cardTallerStyle = {
         padding: '2rem',
         boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
         transition: '0.3s',
@@ -12,12 +12,12 @@ function TalleresCards({ DataTaller }) {
         flexDirection: 'column',
         verticalAlign: 'top',
         backgroundColor: '#FED2C0',
-        gap: '1rem', 
+        gap: '1rem',
 
 
     };
 
-    
+
 
     return (
         <div className="CardTaller" style={cardTallerStyle}>

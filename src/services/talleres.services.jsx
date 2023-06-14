@@ -8,3 +8,7 @@ export const getTalleres = () => {
 export const getInscriptionT = ()=> {
   return axios.get('https://64843740ee799e3216266317.mockapi.io/api/InscriptionT')
 }
+
+export const postInscriptionT = (FormData)=> {
+  return axios.post('https://64843740ee799e3216266317.mockapi.io/api/InscriptionT',FormData)
+}

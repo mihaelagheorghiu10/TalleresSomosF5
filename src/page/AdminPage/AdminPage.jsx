@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer'
 // import ReactDOM from "react-dom";
 import React, { useState } from 'react'
 import './adminPage.module.css'
+import Register from '../../components/register/Register'
 
 function AdminPage() {
   const [data, setData] = useState([])
@@ -104,6 +105,7 @@ function AdminPage() {
           </edit>
         </form>
       </div>
+      <Register/>
       <Footer />
     </div>
   )
