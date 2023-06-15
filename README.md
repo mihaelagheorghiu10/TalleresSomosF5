@@ -24,9 +24,9 @@ The F5 factory foundation proposes us to change the registration form and make a
 
  ## Members  
   
-- [Vanessa](https://github.com/vanessa-cp)  - SCRUM Master
+- [Vanessa](https://github.com/vanessa-cp)  - Product Owner
 
-- [Mihaela Gheorghiu](https://github.com/mihaelagheorghiu10) - Product Owner
+- [Mihaela Gheorghiu](https://github.com/mihaelagheorghiu10)  SCRUM Master
 
 - [fadoua ibrahimi](https://github.com/ifadoua2) - Developer
 
