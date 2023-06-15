@@ -12,7 +12,7 @@ export default function Talleres() {
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
-    setDataTalleres(data[level].talleres)
+    setDataTalleres(data[0].nivelesDeTaller[level].talleres)
     console.log(data, 'json')
   }
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Talleres() {
     <div>
       <Navbar />
       <div className={style.HomePageConteiner}>
-        <div className={style.eventCardsHomePage}>
+        <div className={style.eventCardsHomePage} style={{ marginTop: '5rem' }}>
           {DataTalleres &&
             DataTalleres.map((taller) => {
               return <TalleresCards DataTaller={taller}></TalleresCards>
