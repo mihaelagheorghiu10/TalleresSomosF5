@@ -1,70 +1,138 @@
- Getting Started with Create React App
+<p align="center"><img src="https://user-images.githubusercontent.com/116794919/220713053-3dc7d8ad-a6dd-46ad-ae35-46396f5e0e95.png" width="300" alt="TRIBE.FLY"></p>
+<p align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"><img src="https://user-images.githubusercontent.com/116546624/220708465-4602d358-c8ab-4379-946e-2df420261c0c.jpg" width="50" alt="LOGO"></p>
+<p align="center">
 
-## Available Scripts
+## Table of Contents
+1. [Description](#description)
+2. [Members](#members) 
+3. [Design](#design)
+4. [Technologies](#technologies)
+5. [Tools](#tools)
+6. [To-install-project](#to-install-project)
+7. [Tests](#tests)
+8. [Methodology](#methodology)
+9. [Core-skills](#core-skills)
 
-In the project directory, you can run:
+ 
 
-### `npm start`
+## Description  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On our website, we strive to offer unique and authentic experiences. It's more than just a place - we want to help our customers create unforgettable memories during their travels.
 
-### `npm test`
+ ## Members  
+  
+- [Linda Haeli](https://github.com/LindaHG1) - SCRUM Master
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Jas Marin](https://github.com/JasMarin) - Product Owner
 
-### `npm run build`
+- [Carmen Gallardo Pozo](https://github.com/CarmenGP) - Developer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Anyi](https://github.com/Anyi79) - Developer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Lucas](https://github.com/Lucasibf5) - Developer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  [Salah](https://github.com/SalahREH) - Developer
 
-### `npm run eject`
+-  [Rodrigo](https://github.com/Rodrigo-ASJ) - Developer
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-  [Rocio Germillac](https://github.com/rgermillaclopez) - Developer
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-  [Vanessa](https://github.com/vanessa-cp) - Developer
+  
+## Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="center">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="https://user-images.githubusercontent.com/116794919/220887955-63f4f80e-004c-41d3-903e-d12cec5addbe.png" width="300px">
 
-## Learn More
+<img src="https://user-images.githubusercontent.com/116794919/220888272-f1525d2a-603e-423e-99e7-3061ab3ee676.png" width="300px">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://user-images.githubusercontent.com/116794919/220888674-7d0366ea-2029-42df-93f8-a653b4d48db6.png" width="300px">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://user-images.githubusercontent.com/116794919/220888998-4fe8a857-d23e-4cfc-a251-15cecebd51bc.png" width="300px">
 
-### Code Splitting
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ <p align="center">
+ <img src= "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></img>
+ <img src= "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"></img>
+ <img src= "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"></img>
+ <img src= "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></img>
+ <img src= "https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"></img>
+ <img src= "https://img.shields.io/badge/laravel-%23E34F26.svg?style=for-the-badge&logo=laravellogoColor=white"></img>
+ <img src= "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></img> 
+ 
+ </p>
+ 
+ ## Tools
 
-### Making a Progressive Web App
+ <p align="center"><a herf="https://www.figma.com/file/j3PmBXAYaB5q9chh5o23tw/Quotes?node-id=0%3A1&t=wIPAO9j1BXSjwg2G-0"><img src= "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></a>
+ <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
+ <a herf="https://trello.com/b/MEFwJ2xu/frases">
+ <img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></a>
+ <img src= "https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## To-install-project
 
-### Advanced Configuration
+* Clone git https://github.com/CarmenGP/tribe-fly.git
+* npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Tests 
 
-### Deployment
+* npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Methodology
 
-### `npm run build` fails to minify
+* Agile and SCRUM.
+* Mob programming.
+* Pair programming.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</p>
+
+
+## Technologies
+
+ <p align="center">
+ 
+ <img src= "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></img>
+ <img src= "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"></img>
+ <img src= "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"></img>
+ <img src= "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></img>
+ <img src= "https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"></img>
+ <img src= "https://img.shields.io/badge/laravel-%23E34F26.svg?style=for-the-badge&logo=laravellogoColor=white"></img>
+ <img src= "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></img> </p>
+ 
+ ## Tools
+
+ <p align="center"><a herf="https://www.figma.com/file/j3PmBXAYaB5q9chh5o23tw/Quotes?node-id=0%3A1&t=wIPAO9j1BXSjwg2G-0"><img src= "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></a>
+ <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
+ <a herf="https://trello.com/b/MEFwJ2xu/frases"><img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></img>
+  <img src= "https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+
+## To-install-project
+
+* Clone git https://github.com/CarmenGP/tribe-fly/edit/main/README.md
+* npm install
+
+## Tests 
+
+* npm test
+
+## Methodology
+
+* Agile and SCRUM.
+* Mob programming.
+* Pair programming.
+
+## Core skills
+* MVC Design pattern.
+* Git version control system.
+* User stories and tasks implementation (Trello).
+
+* Communication and self-evaluation.

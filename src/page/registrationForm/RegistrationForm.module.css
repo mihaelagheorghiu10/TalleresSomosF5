@@ -38,3 +38,7 @@ button {
 button:hover {
     background-color: #FD4747;
 }
+
+.successMassage {
+    color: #fff;
+  }
