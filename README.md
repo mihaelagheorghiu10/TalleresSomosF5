@@ -24,9 +24,9 @@ The F5 factory foundation proposes us to change the registration form and make a
 
  ## Members  
   
-- [Vanessa](https://github.com/vanessa-cp)  - SCRUM Master
+- [Vanessa](https://github.com/vanessa-cp)  - Product Owner
 
-- [Mihaela Gheorghiu](https://github.com/mihaelagheorghiu10) - Product Owner
+- [Mihaela Gheorghiu](https://github.com/mihaelagheorghiu10)  SCRUM Master
 
 - [fadoua ibrahimi](https://github.com/ifadoua2) - Developer
 
@@ -61,7 +61,7 @@ The F5 factory foundation proposes us to change the registration form and make a
  <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
  <a herf="https://trello.com/b/MEFwJ2xu/frases">
  <img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></a>
- <img src= "https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+
 
 ## To-install-project
 
@@ -90,7 +90,7 @@ The F5 factory foundation proposes us to change the registration form and make a
  <img src= "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"></img>
  <img src= "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></img>
  <img src= "https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"></img>
- <img src= "https://img.shields.io/badge/laravel-%23E34F26.svg?style=for-the-badge&logo=laravellogoColor=white"></img>
+
  <img src= "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></img> </p>
  
 
