@@ -18,7 +18,7 @@ import { getTalleres } from '../../services/talleres.services'
 //}
 
 function CategoryCards({ dataCategoryCards, beginnerLevel }) {
-  const [DataTalleres, setDataTalleres] = useState([])
+  /*  const [DataTalleres, setDataTalleres] = useState([])
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
@@ -28,7 +28,7 @@ function CategoryCards({ dataCategoryCards, beginnerLevel }) {
   useEffect(() => {
     getAllTalleres()
   }, [])
-
+ */
   const cardStyle = {
     padding: '1rem',
     boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
@@ -51,29 +51,26 @@ function CategoryCards({ dataCategoryCards, beginnerLevel }) {
     margin: '10px 0 10px',
   }
 
-    const pStyle = {
-        fontSize: '16px',
-        lineHeight: '1.5',
-        marginBottom: '20px'
-       
-    };
+  const pStyle = {
+    fontSize: '16px',
+    lineHeight: '1.5',
+    marginBottom: '20px',
+  }
 
-    const buttonStyle = {
-        display: 'inline-block',
-        fontSize: '14px',
-        color: '#fff',
-        backgroundColor: '#007bff',
-        padding: '8px 16px',
-        borderRadius: '2px',
-        textDecoration: 'none',
-        borderRadius: '10px'
-        
-    };
+  const buttonStyle = {
+    display: 'inline-block',
+    fontSize: '14px',
+    color: '#fff',
+    backgroundColor: '#007bff',
+    padding: '8px 16px',
+    borderRadius: '2px',
+    textDecoration: 'none',
+    borderRadius: '10px',
+  }
 
-    const buttonHoverStyle = {
-        backgroundColor: '#0069d9'
-
-    };
+  const buttonHoverStyle = {
+    backgroundColor: '#0069d9',
+  }
 
   const squareStyle = {
     backgroundColor: '#004540',
