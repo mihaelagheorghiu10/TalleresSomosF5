@@ -91,7 +91,7 @@ const RegistrationForm = () => {
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" value={email} onChange={handleChange} />
+                <input required type="email" id="email" name="email" value={email} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="whatsapp">Whatsapp:</label>
@@ -109,15 +109,16 @@ const RegistrationForm = () => {
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="ubicacion"> Ubicación:</label>
-                <input type="text" id="ubicacion" name="ubicacion" value={ubicacion} onChange={handleChange} />
+                <input required type="text" id="ubicacion" name="ubicacion" value={ubicacion} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="nacionalidad"> Nacionalidad:</label>
-                <input type="text" id="nacionalidad" name="nacionalidad" value={nacionalidad} onChange={handleChange} />
+                <input required type="text" id="nacionalidad" name="nacionalidad" value={nacionalidad} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="aceptaPrivacidad"> Acepta privacidad:</label>
                 <input
+                required
                     type="checkbox"
                     id="aceptaPrivacidad"
                     name="aceptaPrivacidad"
@@ -134,7 +135,7 @@ const RegistrationForm = () => {
             <button type="submit">Enviar</button>
 
             {formSubmitted && (
-                <Link to={`/AdminPage/`} className={style.successMessage}>
+                <Link to={`/AdminPage/`} className={`${style.successMessage}`}>
                     Enviado correctamente
                 </Link>
             )}
