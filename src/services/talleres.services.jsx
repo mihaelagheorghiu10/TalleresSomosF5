@@ -10,6 +10,9 @@ export const getInscriptionT = () => {
   )
 }
 
+export const postInscriptionT = (FormData)=> {
+  return axios.post('https://64843740ee799e3216266317.mockapi.io/api/InscriptionT',FormData)
+}
 export const creatTaller = (formData) => {
   return axios.put(
     'https://6475cfc3e607ba4797dca746.mockapi.io/api/Talleres/1',
@@ -34,6 +37,10 @@ const userData = {
   nombre: '',
   email: '',
   contraseña: '',
+}
+
+export const postInscriptionT = (FormData)=> {
+  return axios.post('https://64843740ee799e3216266317.mockapi.io/api/InscriptionT',FormData)
 }
 
 createUser(userData) */

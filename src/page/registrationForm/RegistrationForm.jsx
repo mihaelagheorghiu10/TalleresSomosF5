@@ -1,68 +1,48 @@
 import React, { useState } from 'react';
 import style from './RegistrationForm.module.css'
-import { getInscriptionT } from '../../services/talleres.services';
+import { getInscriptionT  } from '../../services/talleres.services';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-
+import axios from 'axios';
 
 const RegistrationForm = () => {
-    const [DataInscriptionT, setDataInscriptionT] = useState([])
+    const [formData, setFormData] = useState({
+        nombre: '',
+        whatsapp: '',
+        genero: '',
+        email: '',
+        ubicacion: '',
+        nacionalidad: '',
+        aceptaPrivacidad: false,
+        comoNosConocio: '',
+    });
+
+    const [DataInscriptionT, setDataInscriptionT] = useState([]);
     const [formSubmitted, setFormSubmitted] = useState(false);
+
     const getAllInscription = async () => {
         const { data } = await getInscriptionT();
         setDataInscriptionT(data.registrationForm);
         console.log(data, "json");
-
-    }
+    };
 
     useEffect(() => {
         getAllInscription();
-    }, [])
+    }, []);
 
+    const { nombre, whatsapp, genero, email, ubicacion, nacionalidad, aceptaPrivacidad, comoNosConocio } = formData;
 
-    const [nombre, setNombre] = useState('');
-    const [whatsapp, setWhatsapp] = useState('');
-    const [genero, setGenero] = useState('');
-    const [email, setEmail] = useState('');
-    const [ubicacion, setUbicacion] = useState('');
-    const [nacionalidad, setNacionalidad] = useState('');
-    const [aceptaPrivacidad, setAceptaPrivacidad] = useState(false);
-    const [comoNosConocio, setComoNosConocio] = useState('');
+    const handleChange = (event) => {
+        const { name, value, type, checked } = event.target;
+        const newValue = type === 'checkbox' ? checked : value;
 
-    const handleNombreChange = (event) => {
-        setNombre(event.target.value);
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: newValue,
+        }));
     };
 
-    const handleWhatsappChange = (event) => {
-        setWhatsapp(event.target.value);
-    };
-
-    const handleGeneroChange = (event) => {
-        setGenero(event.target.value);
-    };
-
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
-
-    const handleUbicacionChange = (event) => {
-        setUbicacion(event.target.value);
-    };
-
-    const handleNacionalidadChange = (event) => {
-        setNacionalidad(event.target.value);
-    };
-
-    const handleAceptaPrivacidadChange = (event) => {
-        setAceptaPrivacidad(event.target.checked);
-    };
-
-    const handleComoNosConocioChange = (event) => {
-        setComoNosConocio(event.target.value);
-    };
-
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         console.log('Nombre completo:', nombre);
         console.log('Email:', email);
@@ -73,102 +53,91 @@ const RegistrationForm = () => {
         console.log('Acepta privacidad:', aceptaPrivacidad);
         console.log('Como nos conoció:', comoNosConocio);
 
-        // realizar el envío de datos o ejecutar cualquier acción adicional
-        setFormSubmitted(true);
+        try {
+            
+            await axios.post('https://64843740ee799e3216266317.mockapi.io/api/InscriptionT', formData);
+
+            setFormSubmitted(true);
+
+    
+            setFormData({
+                nombre: '',
+                whatsapp: '',
+                genero: '',
+                email: '',
+                ubicacion: '',
+                nacionalidad: '',
+                aceptaPrivacidad: false,
+                comoNosConocio: '',
+            });
+
+        } catch (error) {
+            console.error(error);
+        }
     };
 
-
-
-
-
+    const opcionesGenero = [
+        { value: '', label: 'Seleccione' },
+        { value: 'H', label: 'Hombre' },
+        { value: 'M', label: 'Mujer' },
+        { value: 'O', label: 'Otro' },
+    ];
 
     return (
         <form onSubmit={handleSubmit} className={style.container}>
             <div className={style.inputContainer}>
                 <label htmlFor="nombre">Nombre completo:</label>
-                <input
-                    type="text"
-                    id="nombre"
-                    value={nombre}
-                    onChange={handleNombreChange}
-                />
+                <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={handleEmailChange}
-                />
+                <input type="email" id="email" name="email" value={email} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="whatsapp">Whatsapp:</label>
-                <input
-                    type="whatsapp"
-                    id="whatsapp"
-                    value={whatsapp}
-                    onChange={handleWhatsappChange}
-                />
+                <input type="whatsapp" id="whatsapp" name="whatsapp" value={whatsapp} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="genero">Como se identifica:</label>
-                <select id="genero" value={genero} onChange={handleGeneroChange}>
-                    <option value="">Seleccione</option>
-                    <option value="H">Hombre</option>
-                    <option value="M">Mujer</option>
-                    <option value="O">Otro</option>
-                </select>
-
+                <select id="genero" name="genero" value={genero} onChange={handleChange}>
+                    {opcionesGenero.map((opcion) => (
+                        <option key={opcion.value} value={opcion.value}>
+                            {opcion.label}
+                        </option>
+                    ))}</select>
+                
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="ubicacion"> Ubicación:</label>
-                <input
-                    type="text"
-                    id="ubicacion"
-                    value={ubicacion}
-                    onChange={handleUbicacionChange}
-                />
+                <input type="text" id="ubicacion" name="ubicacion" value={ubicacion} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="nacionalidad"> Nacionalidad:</label>
-                <input
-                    type="text"
-                    id="nacionalidad"
-                    value={nacionalidad}
-                    onChange={handleNacionalidadChange}
-                />
+                <input type="text" id="nacionalidad" name="nacionalidad" value={nacionalidad} onChange={handleChange} />
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="aceptaPrivacidad"> Acepta privacidad:</label>
                 <input
-                    type="radio"
-                    id="aceptaPrivacidadNo"
-                    name='aceptarPrivacidad'
-                    value="Si"
-                    chacked={aceptaPrivacidad === 'Si'}
-                    onChange={handleAceptaPrivacidadChange}
+                    type="checkbox"
+                    id="aceptaPrivacidad"
+                    name="aceptaPrivacidad"
+                    checked={aceptaPrivacidad}
+                    onChange={handleChange}
                 />
-                <label html="aceptarPrivacidadNo">Si</label>
+                <label htmlFor="aceptaPrivacidad">Si</label>
             </div>
             <div className={style.inputContainer}>
                 <label htmlFor="comoNosConocio"> Como nos conoció:</label>
-                <input
-                    type="text"
-                    id="comoNosConocio"
-                    value={comoNosConocio}
-                    onChange={handleComoNosConocioChange}
-                />
+                <input type="text" id="comoNosConocio" name="comoNosConocio" value={comoNosConocio} onChange={handleChange} />
             </div>
 
             <button type="submit">Enviar</button>
 
             {formSubmitted && (
-                <Link to={`/AdminPage/${DataInscriptionT.id}`} className={style.successMessage}>
+                <Link to={`/AdminPage/`} className={style.successMessage}>
                     Enviado correctamente
                 </Link>
             )}
-
         </form>
     );
 };

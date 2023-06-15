@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 // import ReactDOM from "react-dom";
 import React, { useEffect, useState } from 'react'
 import './adminPage.module.css'
+import Register from '../../components/register/Register'
 import { creatTaller, getTalleres } from '../../services/talleres.services'
 // import { AuthContext } from '../../components/AuthContext'
 
@@ -246,6 +247,7 @@ function AdminPage() {
           </edit>
         </form>
       </div>
+      <Register/>
       <Footer />
     </div>
   )

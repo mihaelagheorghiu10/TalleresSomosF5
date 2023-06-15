@@ -8,7 +8,7 @@ import { getTalleres } from '../../services/talleres.services'
 import { useState } from 'react'
 
 function HomePage() {
-  const [DataTalleres, setDataTalleres] = useState([])
+  const [DataTalleres, setDataTalleres] = useState(null)
 
   const getAllTalleres = async () => {
     const { data } = await getTalleres()
